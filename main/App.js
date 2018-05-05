@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Player from './Player';
 import Playlist from './Playlist';
+import styles from './App.css';
 
 class App extends Component {
   state = {
@@ -21,12 +22,11 @@ class App extends Component {
       .then(resp => resp.json())
       .then(({ data }) => {
         data.forEach(item => (item.id = this.getId(item.uri)));
-        this.setState({ currentVideo: data[0], videos: data.slice(1) });
+        this.setState({ currentVideo: data[0], videos: data });
       });
   };
 
   loadVideo = video => {
-    console.log('hey', video);
     this.setState({ currentVideo: video });
   };
 
@@ -34,7 +34,7 @@ class App extends Component {
     const { state } = this;
 
     return (
-      <div className="app">
+      <div className={styles.app}>
         <Player video={state.currentVideo} />
         <Playlist videos={state.videos} loadVideo={this.loadVideo} />
       </div>

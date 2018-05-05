@@ -1,0 +1,5 @@
+.playlist {
+  height: 75vh;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}

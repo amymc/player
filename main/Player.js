@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import VimeoPlayer from '@vimeo/player';
+import styles from './Player.css';
 
 class Player extends Component {
   componentDidUpdate = prevProps => {
@@ -20,7 +21,7 @@ class Player extends Component {
   };
 
   render() {
-    return <div id="player" />;
+    return <div id="player" className={styles.player} />;
   }
 }
 
