@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Player from './Player';
+// import Playlist from './Playlist';
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +25,14 @@ class App extends Component {
   }
 
   render() {
-    return <div className="app" />;
+    const { state } = this;
+
+    return (
+      <div className="app">
+        <Player video={state.videos[0]} />
+        {/*<Playlist videos={state.videos} />*/}
+      </div>
+    );
   }
 }
 
