@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Player from './Player';
-// import Playlist from './Playlist';
+import Playlist from './Playlist';
 
 class App extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="app">
         <Player video={state.videos[0]} />
-        {/*<Playlist videos={state.videos} />*/}
+        <Playlist videos={state.videos.slice(1)} />
       </div>
     );
   }
