@@ -7,7 +7,7 @@ class Playlist extends Component {
     return (
       <div className="playlist">
         {props.videos.map((video, index) => (
-          <ListItem key={index} video={video} />
+          <ListItem key={index} video={video} loadVideo={props.loadVideo} />
         ))}
       </div>
     );

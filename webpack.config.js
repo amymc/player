@@ -4,22 +4,22 @@ const path = require('path');
 module.exports = {
     entry: path.join(__dirname, 'index.js'),
     output: {
-      path: __dirname,
-      filename: 'bundle.js'
+        path: __dirname,
+        filename: 'bundle.js',
     },
     module: {
         rules: [
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    use:{
+                    use: {
                         loader: 'css-loader',
                         options: {
                             modules: true,
-                            localIdentName: '[name]_[local]--[hash:base64:5]'
-                        }
-                    }
-                })
+                            localIdentName: '[name]_[local]--[hash:base64:5]',
+                        },
+                    },
+                }),
             },
             {
                 test: /\.js$/,
@@ -28,13 +28,15 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env'],
-                        plugins: ['transform-react-jsx', 'react-css-modules']
-                    }
-              }
-            }
-        ]
+                        plugins: [
+                            'transform-react-jsx',
+                            'react-css-modules',
+                            'transform-class-properties',
+                        ],
+                    },
+                },
+            },
+        ],
     },
-    plugins: [
-      new ExtractTextPlugin('bundle.css'),
-    ]
-}
+    plugins: [new ExtractTextPlugin('bundle.css')],
+};

@@ -3,34 +3,37 @@ import Player from './Player';
 import Playlist from './Playlist';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      videos: [],
-    };
-  }
+  state = {
+    currentVideo: null,
+    videos: [],
+  };
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.getPlaylist();
-  }
+  };
 
-  getPlaylist() {
+  getPlaylist = () => {
     fetch(
       'https://api.vimeo.com/channels/documentary/videos?access_token=b01e6d1ea960f10c41ed22b14baa8c07'
     )
       .then(resp => resp.json())
       .then(({ data }) => {
-        this.setState({ videos: data });
+        this.setState({ currentVideo: data[0], videos: data.slice(1) });
       });
-  }
+  };
+
+  loadVideo = video => {
+    console.log('hey', video);
+    this.setState({ currentVideo: video });
+  };
 
   render() {
     const { state } = this;
 
     return (
       <div className="app">
-        <Player video={state.videos[0]} />
-        <Playlist videos={state.videos.slice(1)} />
+        <Player video={state.currentVideo} />
+        <Playlist videos={state.videos} loadVideo={this.loadVideo} />
       </div>
     );
   }
