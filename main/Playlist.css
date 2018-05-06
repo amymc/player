@@ -1,16 +1,24 @@
 .playlist {
-  padding: 0 30px;
+  margin-top: 20px;
 }
 
 .title {
-  position: fixed;
   display: block;
   margin: 0 22px;
 }
 
 .listItems {
-  margin-top: 50px;
-  height: 75vh;
+  position: relative;
+  margin-top: 15px;
+  height: 15rem;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
+
+@media (min-width: 780px) {
+  .playlist {
+    flex: 0;
+    margin-top: 0;
+  }
+}
+

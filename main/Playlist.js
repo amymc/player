@@ -10,7 +10,7 @@ class Playlist extends Component {
 
   onClick = video => {
     this.listItems.scroll({
-      top: this.refsCollection[video.id].offsetTop - 50,
+      top: this.refsCollection[video.id].offsetTop - 15,
       left: 0,
       behavior: 'smooth',
     });

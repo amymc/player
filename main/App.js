@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Player from './Player';
 import Playlist from './Playlist';
+import VideoInfo from './VideoInfo';
 import styles from './App.css';
 
 class App extends Component {
@@ -46,6 +47,7 @@ class App extends Component {
           currentVideo={state.currentVideo}
           loadVideo={this.loadVideo}
         />
+        {state.currentVideo && <VideoInfo video={state.currentVideo} />}
       </div>
     );
   }

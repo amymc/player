@@ -1,0 +1,47 @@
+.videoInfo {
+  position: relative;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+  line-height: 1.11111;
+  color: rgb(26, 46, 59);
+}
+
+.description {
+  position: relative;
+  max-height: 10rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  line-height: 1.42857;
+  font-size: 0.875rem;
+}
+
+.description::after {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0,
+    #fff 70%
+  );
+  content: '';
+}
+
+.show {
+  position: absolute;
+  bottom: 0.8rem;
+  z-index: 3;
+}
+
+@media (min-width: 780px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}

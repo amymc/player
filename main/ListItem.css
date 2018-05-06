@@ -1,17 +1,22 @@
 .listItem {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
+  margin: 0.5rem 0;
 }
 
 .playIcon {
   color: #00adef;
-  bottom: 70px;
+  top: 25px;
+  /*bottom: 70px;*/
   position: absolute;
   font-size: 25px;
 }
 
-.image,
-.title {
+.image {
   margin: 0 22px;
+}
+
+.title {
+  margin: 0;
 }

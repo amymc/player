@@ -11,9 +11,7 @@ class Player extends Component {
     } else {
       this.player = new VimeoPlayer('player-video', {
         id: props.video.id,
-        width: 640,
       });
-      this.player.play();
     }
   };
 
@@ -26,12 +24,11 @@ class Player extends Component {
 
     return (
       <div className={styles.player}>
-        <div id="player-video" />
-        {video && <h1 className={styles.title}>{video.name}</h1>}
-        {video && <p className={styles.description}>{video.description}</p>}
+        <div id="player-video" className={styles.video} />
       </div>
     );
   }
 }
 
 export default Player;
+
