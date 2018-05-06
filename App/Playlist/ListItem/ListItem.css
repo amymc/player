@@ -7,21 +7,20 @@
 
 .playIcon {
   color: #00adef;
-  top: 25px;
+  top: 1.5rem;
   position: absolute;
-  font-size: 25px;
+  font-size: 1.55rem;
 }
 
 .image {
-  margin: 0 22px;
-  max-height: 75px;
+  margin: 0 1.35rem;
 }
 
 .title {
   margin: 0;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 48.75rem) {
   .title {
     font-size: 1rem;
     margin-bottom: 0.5rem;

@@ -17,7 +17,7 @@
   align-self: center;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 48.75rem) {
   .content {
     flex-direction: row;
     flex-wrap: wrap;

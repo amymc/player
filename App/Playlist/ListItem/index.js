@@ -12,9 +12,9 @@ const ListItem = props => {
         <span className={styles.playIcon}>&#9658;</span>
       )}
       <img className={styles.image} src={props.video.pictures.sizes[0].link} />
-      <div className={styles.info}>
+      <div>
         <h3 className={styles.title}>{props.video.name}</h3>
-        <span className={styles.title}>{props.video.user.name}</span>
+        <span>{props.video.user.name}</span>
       </div>
     </div>
   );

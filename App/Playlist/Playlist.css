@@ -1,21 +1,21 @@
 .playlist {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .title {
   display: block;
-  margin: 0 22px;
+  margin: 0 1.35rem;
 }
 
 .listItems {
   position: relative;
-  margin-top: 15px;
+  margin-top: 0.95rem;
   height: 15rem;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 48.75rem) {
   .playlist {
     flex-basis: 0%;
     flex-grow: 1;

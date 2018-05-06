@@ -1,43 +1,43 @@
+:global(:root) {
+  --small-height: 240px;
+  --medium-height: 360px;
+  --medium-width: 640px;
+}
+
 .video {
   position: relative;
   display: flex;
   justify-content: center;
   background-color: black;
   width: 100%;
-  height: 240px;
+  height: var(--small-height);
 }
 
 .video iframe {
   width: 426px;
-  height: 240px;
+  height: var(--small-height);
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 667px) {
+@media (min-width: 41.69rem) {
   .video {
-    height: 360px;
+    height: var(--medium-height);
   }
   .video iframe {
     position: relative;
-    width: 640px;
-    height: 360px;
+    width: var(--medium-width);
+    height: var(--medium-height);
   }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 48.75rem) {
   .video iframe {
     position: relative;
     width: 500px;
   }
 }
 
-@media (min-width: 920px) {
+@media (min-width: 57.5rem) {
   .video iframe {
-    width: 640px;
-    height: 360px;
+    width: var(--medium-width);
   }
 }
