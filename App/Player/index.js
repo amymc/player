@@ -4,25 +4,15 @@ import styles from './Player.css';
 
 class Player extends Component {
   componentDidMount = prevProps => {
-    // const { player, props } = this;
-    // if (prevProps.video === props.video) return;
-    // if (player) {
-    //   player.loadVideo(props.video.id).then(() => player.play());
-    // } else {
     this.player = new VimeoPlayer('player-video', {
       id: this.props.video.id,
     });
   };
+
   componentDidUpdate = prevProps => {
     const { player, props } = this;
     if (prevProps.video === props.video) return;
-    // if (player) {
     player.loadVideo(props.video.id).then(() => player.play());
-    // } else {
-    //   this.player = new VimeoPlayer('player-video', {
-    //     id: props.video.id,
-    //   });
-    // }
   };
 
   componentWillUnmount = () => {

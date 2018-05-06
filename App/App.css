@@ -1,12 +1,18 @@
 .app {
   display: flex;
   flex-direction: column;
-  /*margin: 1.5rem;*/
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.5rem;
 }
 
 .spinner {
   height: 8rem;
+  margin-top: 1.5rem;
   align-self: center;
 }
 

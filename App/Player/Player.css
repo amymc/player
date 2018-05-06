@@ -1,11 +1,7 @@
-/*.player {
-  width: 640px;
-}
-*/
-
 .video {
   position: relative;
   padding-bottom: 56.25%;
+  background-color: black;
 }
 
 .video iframe {

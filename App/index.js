@@ -44,20 +44,21 @@ class App extends Component {
     return (
       <div className={styles.app}>
         <Header />
-
-        {state.isLoading ? (
-          <Spinner className={styles.spinner} />
-        ) : (
-          <React.Fragment>
-            <Player video={state.currentVideo} />
-            <Playlist
-              videos={state.videos}
-              currentVideo={state.currentVideo}
-              loadVideo={this.loadVideo}
-            />
-            {state.currentVideo && <VideoInfo video={state.currentVideo} />}
-          </React.Fragment>
-        )}
+        <div className={styles.content}>
+          {state.isLoading ? (
+            <Spinner className={styles.spinner} />
+          ) : (
+            <React.Fragment>
+              <Player video={state.currentVideo} />
+              <Playlist
+                videos={state.videos}
+                currentVideo={state.currentVideo}
+                loadVideo={this.loadVideo}
+              />
+              {state.currentVideo && <VideoInfo video={state.currentVideo} />}
+            </React.Fragment>
+          )}
+        </div>
       </div>
     );
   }
