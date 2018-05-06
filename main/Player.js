@@ -7,12 +7,13 @@ class Player extends Component {
     const { player, props } = this;
     if (prevProps.video === props.video) return;
     if (player) {
-      player.loadVideo(props.video.id);
+      player.loadVideo(props.video.id).then(() => player.play());
     } else {
       this.player = new VimeoPlayer('player-video', {
         id: props.video.id,
         width: 640,
       });
+      this.player.play();
     }
   };
 
