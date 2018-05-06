@@ -1,0 +1,17 @@
+.listItem {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.playIcon {
+  color: #00adef;
+  bottom: 70px;
+  position: absolute;
+  font-size: 25px;
+}
+
+.image,
+.title {
+  margin: 0 22px;
+}

@@ -1,4 +1,15 @@
 .playlist {
+  padding: 0 30px;
+}
+
+.title {
+  position: fixed;
+  display: block;
+  margin: 0 22px;
+}
+
+.listItems {
+  margin-top: 50px;
   height: 75vh;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;

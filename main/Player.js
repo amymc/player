@@ -26,8 +26,8 @@ class Player extends Component {
     return (
       <div className={styles.player}>
         <div id="player-video" />
-        {video && <span>{video.name}</span>}
-        {video && <span>{video.description}</span>}
+        {video && <h1 className={styles.title}>{video.name}</h1>}
+        {video && <p className={styles.description}>{video.description}</p>}
       </div>
     );
   }
