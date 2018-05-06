@@ -24,6 +24,7 @@ class Playlist extends Component {
         {props.videos.map((video, index) => (
           <ListItem
             key={index}
+            currentVideo={props.currentVideo}
             video={video}
             onClick={this.onClick}
             itemRef={instance => {

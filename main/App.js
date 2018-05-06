@@ -41,7 +41,11 @@ class App extends Component {
     return (
       <div className={styles.app}>
         <Player video={state.currentVideo} />
-        <Playlist videos={state.videos} loadVideo={this.loadVideo} />
+        <Playlist
+          videos={state.videos}
+          currentVideo={state.currentVideo}
+          loadVideo={this.loadVideo}
+        />
       </div>
     );
   }

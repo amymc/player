@@ -7,6 +7,7 @@ const ListItem = props => {
       onClick={() => props.onClick(props.video)}
       ref={props.itemRef}
     >
+      {props.video.id === props.currentVideo.id && <span>&#9658;</span>}
       <img src={props.video.pictures.sizes[1].link} />
       <span>{props.video.name}</span>
     </div>
