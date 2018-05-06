@@ -9,7 +9,11 @@ class Playlist extends Component {
   }
 
   onClick = video => {
-    this.playlist.scrollTop = this.refsCollection[video.id].offsetTop;
+    this.playlist.scroll({
+      top: this.refsCollection[video.id].offsetTop,
+      left: 0,
+      behavior: 'smooth',
+    });
     this.props.loadVideo(video);
   };
 
