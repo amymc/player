@@ -9,7 +9,7 @@ class Player extends Component {
     if (player) {
       player.loadVideo(props.video.id);
     } else {
-      this.player = new VimeoPlayer('player', {
+      this.player = new VimeoPlayer('player-video', {
         id: props.video.id,
         width: 640,
       });
@@ -21,7 +21,15 @@ class Player extends Component {
   };
 
   render() {
-    return <div id="player" className={styles.player} />;
+    const { video } = this.props;
+
+    return (
+      <div className={styles.player}>
+        <div id="player-video" />
+        {video && <span>{video.name}</span>}
+        {video && <span>{video.description}</span>}
+      </div>
+    );
   }
 }
 

@@ -5,6 +5,7 @@ import styles from './App.css';
 
 class App extends Component {
   state = {
+    isLoading: true,
     currentVideo: null,
     videos: [],
   };
@@ -22,7 +23,11 @@ class App extends Component {
       .then(resp => resp.json())
       .then(({ data }) => {
         data.forEach(item => (item.id = this.getId(item.uri)));
-        this.setState({ currentVideo: data[0], videos: data });
+        this.setState({
+          isLoading: false,
+          currentVideo: data[0],
+          videos: data,
+        });
       });
   };
 
