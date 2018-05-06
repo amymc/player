@@ -22,7 +22,11 @@
     "gist-cli": "^0.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-svg-loader": "^2.1.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
+  },
+  "devDependencies": {
+    "svg-loader": "^0.0.2"
   }
 }

@@ -32,3 +32,11 @@
     height: 280px;
   }
 }
+
+@media (min-width: 900px) {
+  .video iframe {
+    width: 640px;
+    height: 360px;
+  }
+}
+

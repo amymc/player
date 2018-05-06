@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Player from './Player';
 import Playlist from './Playlist';
 import VideoInfo from './VideoInfo';
+import Spinner from 'react-svg-loader!./assets/spinner.svg';
 import styles from './App.css';
 
 class App extends Component {
@@ -41,13 +42,19 @@ class App extends Component {
 
     return (
       <div className={styles.app}>
-        <Player video={state.currentVideo} />
-        <Playlist
-          videos={state.videos}
-          currentVideo={state.currentVideo}
-          loadVideo={this.loadVideo}
-        />
-        {state.currentVideo && <VideoInfo video={state.currentVideo} />}
+        {state.isLoading ? (
+          <Spinner className={styles.spinner} />
+        ) : (
+          <React.Fragment>
+            <Player video={state.currentVideo} />
+            <Playlist
+              videos={state.videos}
+              currentVideo={state.currentVideo}
+              loadVideo={this.loadVideo}
+            />
+            {state.currentVideo && <VideoInfo video={state.currentVideo} />}
+          </React.Fragment>
+        )}
       </div>
     );
   }

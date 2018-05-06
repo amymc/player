@@ -5,6 +5,11 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.spinner {
+  height: 8rem;
+  align-self: center;
+}
+
 @media (min-width: 780px) {
   .app {
     flex-direction: row;
