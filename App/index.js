@@ -5,6 +5,7 @@ import Playlist from './Playlist';
 import VideoInfo from './VideoInfo';
 import Spinner from 'react-svg-loader!./assets/spinner.svg';
 import styles from './App.css';
+import getPlaylist from '../getPlaylist.js';
 
 class App extends Component {
   state = {
@@ -14,24 +15,13 @@ class App extends Component {
   };
 
   componentDidMount = () => {
-    this.getPlaylist();
-  };
-
-  getId = uri => uri.split('/videos/')[1];
-
-  getPlaylist = () => {
-    fetch(
-      'https://api.vimeo.com/channels/documentary/videos?access_token=b01e6d1ea960f10c41ed22b14baa8c07'
-    )
-      .then(resp => resp.json())
-      .then(({ data }) => {
-        data.forEach(item => (item.id = this.getId(item.uri)));
-        this.setState({
-          isLoading: false,
-          currentVideo: data[0],
-          videos: data,
-        });
+    getPlaylist('documentary').then(results => {
+      this.setState({
+        isLoading: false,
+        currentVideo: results[0],
+        videos: results,
       });
+    });
   };
 
   loadVideo = video => {
