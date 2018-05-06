@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 import Player from './Player';
 import Playlist from './Playlist';
 import VideoInfo from './VideoInfo';
@@ -42,6 +43,8 @@ class App extends Component {
 
     return (
       <div className={styles.app}>
+        <Header />
+
         {state.isLoading ? (
           <Spinner className={styles.spinner} />
         ) : (
