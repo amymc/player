@@ -8,15 +8,22 @@
 .playIcon {
   color: #00adef;
   top: 25px;
-  /*bottom: 70px;*/
   position: absolute;
   font-size: 25px;
 }
 
 .image {
   margin: 0 22px;
+  max-height: 75px;
 }
 
 .title {
   margin: 0;
+}
+
+@media (min-width: 780px) {
+  .title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
 }

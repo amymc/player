@@ -13,11 +13,12 @@
 .spinner {
   height: 8rem;
   margin-top: 1.5rem;
+  flex: 1;
   align-self: center;
 }
 
 @media (min-width: 780px) {
-  .app {
+  .content {
     flex-direction: row;
     flex-wrap: wrap;
   }

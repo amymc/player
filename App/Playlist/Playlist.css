@@ -17,8 +17,17 @@
 
 @media (min-width: 780px) {
   .playlist {
-    flex: 0;
+    flex-basis: 0%;
+    flex-grow: 1;
     margin-top: 0;
   }
-}
 
+  .title {
+    font-size: 1.125rem;
+    margin-top: 0.6rem;
+  }
+
+  .listItems {
+    height: 19.5rem;
+  }
+}
