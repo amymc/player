@@ -3,7 +3,7 @@ import styles from './ListItem.css';
 
 const ListItem = props => {
   return (
-    <div
+    <button
       className={styles.listItem}
       onClick={() => props.onClick(props.video)}
       ref={props.itemRef}
@@ -22,7 +22,7 @@ const ListItem = props => {
         <h3 className={styles.title}>{props.video.name}</h3>
         <span>{props.video.user.name}</span>
       </div>
-    </div>
+    </button>
   );
 };
 
