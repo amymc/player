@@ -18515,7 +18515,9 @@ function (_Component) {
     value: function render() {
       var video = this.props.video;
       return _react.default.createElement("div", {
-        className: _Player.default.player
+        className: _Player.default.player,
+        "data-test-id": "Player",
+        "data-video-id": video.id
       }, _react.default.createElement("div", {
         id: "player-video",
         className: _Player.default.video
@@ -20960,7 +20962,7 @@ function (_Component) {
 
     _this.onClick = function (video) {
       _this.listItems.scroll({
-        top: _this.refsCollection[video.id].offsetTop - 15,
+        top: _this.refsCollection[video.id].offsetTop - 5,
         left: 0,
         behavior: 'smooth'
       });
@@ -20979,7 +20981,8 @@ function (_Component) {
 
       var props = this.props;
       return _react.default.createElement("div", {
-        className: _Playlist.default.playlist
+        className: _Playlist.default.playlist,
+        "data-test-id": "Playlist"
       }, _react.default.createElement("h2", {
         className: _Playlist.default.title
       }, " More from Documentary "), _react.default.createElement("div", {
@@ -21030,16 +21033,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 var ListItem = function ListItem(props) {
-  return _react.default.createElement("div", {
+  return _react.default.createElement("button", {
     className: _ListItem.default.listItem,
     onClick: function onClick() {
       return props.onClick(props.video);
     },
-    ref: props.itemRef
+    ref: props.itemRef,
+    "data-video-id": props.video.id,
+    "data-test-id": "ListItem"
   }, props.video.id === props.currentVideo.id && _react.default.createElement("span", {
     className: _ListItem.default.playIcon
   }, "\u25BA"), _react.default.createElement("img", {
     className: _ListItem.default.image,
+    alt: props.video.name,
     src: props.video.pictures.sizes[0].link
   }), _react.default.createElement("div", null, _react.default.createElement("h3", {
     className: _ListItem.default.title
@@ -21054,7 +21060,7 @@ exports.default = _default;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"listItem":"ListItem_listItem--1C7te","playIcon":"ListItem_playIcon--2C3pv","image":"ListItem_image--2oR7x","title":"ListItem_title--iIMD_"};
+module.exports = {"listItem":"ListItem_listItem--gY2yn","playIcon":"ListItem_playIcon--1OxZI","image":"ListItem_image--oogZC","title":"ListItem_title--1spuO"};
 
 /***/ }),
 /* 39 */

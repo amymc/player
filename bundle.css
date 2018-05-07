@@ -56,30 +56,39 @@
     width: var(--medium-width);
   }
 }
-.ListItem_listItem--1C7te {
+.ListItem_listItem--gY2yn {
   display: flex;
   flex-direction: row;
   position: relative;
   margin: 0.5rem 0;
+  border: none;
+  padding: 0;
+  font: inherit;
+  width: 100%;
+  text-align: left;
 }
 
-.ListItem_playIcon--2C3pv {
+.ListItem_listItem--gY2yn:hover {
+  cursor: pointer;
+}
+
+.ListItem_playIcon--1OxZI {
   color: #00adef;
   top: 1.5rem;
   position: absolute;
   font-size: 1.55rem;
 }
 
-.ListItem_image--2oR7x {
+.ListItem_image--oogZC {
   margin: 0 1.35rem;
 }
 
-.ListItem_title--iIMD_ {
+.ListItem_title--1spuO {
   margin: 0;
 }
 
 @media (min-width: 48.75rem) {
-  .ListItem_title--iIMD_ {
+  .ListItem_title--1spuO {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
