@@ -20,6 +20,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "css-loader": "^0.28.9",
+    "cypress": "^2.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "gist-cli": "^0.2.3",
     "jest": "^22.4.3",

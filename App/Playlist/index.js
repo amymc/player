@@ -10,7 +10,7 @@ class Playlist extends Component {
 
   onClick = video => {
     this.listItems.scroll({
-      top: this.refsCollection[video.id].offsetTop - 15,
+      top: this.refsCollection[video.id].offsetTop - 5,
       left: 0,
       behavior: 'smooth',
     });
@@ -20,7 +20,7 @@ class Playlist extends Component {
   render() {
     const { props } = this;
     return (
-      <div className={styles.playlist}>
+      <div className={styles.playlist} data-test-id="Playlist">
         <h2 className={styles.title}> More from Documentary </h2>
         <div className={styles.listItems} ref={el => (this.listItems = el)}>
           {props.videos.map((video, index) => (

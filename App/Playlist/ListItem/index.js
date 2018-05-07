@@ -7,6 +7,8 @@ const ListItem = props => {
       className={styles.listItem}
       onClick={() => props.onClick(props.video)}
       ref={props.itemRef}
+      data-video-id={props.video.id}
+      data-test-id="ListItem"
     >
       {props.video.id === props.currentVideo.id && (
         <span className={styles.playIcon}>&#9658;</span>

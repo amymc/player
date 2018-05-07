@@ -23,7 +23,11 @@ class Player extends Component {
     const { video } = this.props;
 
     return (
-      <div className={styles.player}>
+      <div
+        className={styles.player}
+        data-test-id="Player"
+        data-video-id={video.id}
+      >
         <div id="player-video" className={styles.video} />
       </div>
     );
