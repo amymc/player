@@ -5,10 +5,14 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "gist": "find . ! \\( -type d -o -path './node_modules/*' -o -name '.*' -o -name '*yarn*' \\) -prune -print | paste -sd ' ' - | sed 's|\\./||g' | xargs gist -o -a",
+    "gist":
+      "find . ! \\( -type d -o -path './node_modules/*' -o -name '.*' -o -name '*yarn*' \\) -prune -print | paste -sd ' ' - | sed 's|\\./||g' | xargs gist -o -a",
     "serve": "webpack-dev-server",
     "submit": "yarn build && yarn gist",
     "test": "jest"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["/cypress/"]
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.46",
