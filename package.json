@@ -5,10 +5,15 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "gist": "find . ! \\( -type d -o -path './node_modules/*' -o -name '.*' -o -name '*yarn*' \\) -prune -print | paste -sd ' ' - | sed 's|\\./||g' | xargs gist -o -a",
+    "gist":
+      "find . ! \\( -type d -o -path './node_modules/*' -o -name '.*' -o -name '*yarn*' \\) -prune -print | paste -sd ' ' - | sed 's|\\./||g' | xargs gist -o -a",
     "serve": "webpack-dev-server",
     "submit": "yarn build && yarn gist",
-    "test": "jest"
+    "test": "jest",
+    "cypress": "cypress open"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["/cypress/"]
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.46",
@@ -20,6 +25,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "css-loader": "^0.28.9",
+    "cypress": "^2.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "gist-cli": "^0.2.3",
     "jest": "^22.4.3",
