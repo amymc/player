@@ -9,7 +9,8 @@
       "find . ! \\( -type d -o -path './node_modules/*' -o -name '.*' -o -name '*yarn*' \\) -prune -print | paste -sd ' ' - | sed 's|\\./||g' | xargs gist -o -a",
     "serve": "webpack-dev-server",
     "submit": "yarn build && yarn gist",
-    "test": "jest"
+    "test": "jest",
+    "cypress": "cypress open"
   },
   "jest": {
     "testPathIgnorePatterns": ["/cypress/"]
