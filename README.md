@@ -83,7 +83,7 @@ We would like you to create an interactive playlist viewing experience, making u
         - In the e2e tests I would have liked to check that the playlist item had been scrolled by checking this `$item.offsetTop === $item.offsetParent.scrollTop`. I'm not experienced with Cypress so I didn't figure out how to do this, instead I check that the position of the $item from the top is less than 5. It's a bit fragile, if there are changes to the css this could break. 
     4. Are there any performance bottlenecks with your solution? if so, what are they and what can you do to fix them/minimize their impact? Fetching the data on page load is slow. We could use a service worker and cache the response. This would also facilitate offline access.
     5. How would your solution cope if the API was slow, broken, or returned incorrect data? At the moment, it doesn't, it just throws an error. As above, if we cached the response we could view that until the API was functional again.
-    6. Anything else you want to share about your solution or the problem? You can run the unit test with `yarn test` ans the e2e tests with `yarn cypress`
+    6. Anything else you want to share about your solution or the problem? You can run the unit test with `yarn test` ans the e2e tests with `yarn cypress`. You can view the app online [here](http://www.amymccarthy.co/player/)
 
 2. Run the submit script to create a gist of your work to send back to us
 
