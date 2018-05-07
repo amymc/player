@@ -11,15 +11,14 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.38",
-    "@babel/preset-env": "^7.0.0-beta.38",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-react": "^7.0.0-beta.46",
     "@vimeo/player": "^2.6.1",
-    "babel-jest": "^22.4.3",
     "babel-loader": "8.0.0-beta.0",
     "babel-plugin-react-css-modules": "^3.3.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
     "gist-cli": "^0.2.3",
@@ -31,6 +30,9 @@
     "webpack-dev-server": "^2.11.1"
   },
   "devDependencies": {
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.4.3",
+    "regenerator-runtime": "^0.11.1",
     "svg-loader": "^0.0.2"
   }
 }
